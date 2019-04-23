@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a>成功</a>
+<hr/>
+<div th:text="${lists}">这是显示欢迎信息</div>
+<table>
+    <tr>
+        <td><hr/>大杂烩<hr/></td>
+    </tr>
+    <tr th:each="l:${lists}">
+        <td th:text="${l}"></td>
+    </tr>
+</table>
+<hr/>
+<a th:href="@{/su}">sdf</a>
+</body>
+</html>
