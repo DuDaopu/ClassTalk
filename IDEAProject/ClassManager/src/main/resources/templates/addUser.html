@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>添加学生界面</title>
+    <meta name="author" content="caibaojian.com"/>
+    <meta name="copyright"
+          content="caibaojian.com/relative-responsive-talbe.html"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<form th:action="@{addUsers}" method="post">
+    <div class="table-two">
+        <!-- first table name -->
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th style="width: 50%">姓名</th>
+                    <th style="width: 45px">操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><input style="width: 100%; height: 100%;" type="text" name="stuname"></td>
+                    <td><input style="width: 100%; height: 100%;" type="submit"
+                               value="提交"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</form>
+</body>
+</html>

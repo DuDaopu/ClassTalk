@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>编辑界面</title>
+    <meta name="author" content="caibaojian.com"/>
+    <meta name="copyright"
+          content="caibaojian.com/relative-responsive-talbe.html"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<form th:action="@{edit}" method="post">
+    <input style="display: none;" type="text" readonly="readonly"
+           name="id" th:value="${user.id}"/>
+    <div class="table-two">
+        <!-- first table name -->
+        <div>
+            <table>
+                <thead>
+                <tr>
+
+                    <th style="width: 45px">操作</th>
+                    <th style="width: 100%">内容</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="user : ${user}">
+                    <td><input style="width: 100%; height: 100%;" type="submit"
+                               value="提交"></td>
+                    <td><textarea rows="5"
+                                  style="width: 100%; overflow: auto; word-break: break-all;"
+                                  placeholder="项目完成情况" name="content" th:text="${user.content}"></textarea></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+</form>
+
+</body>
+</html>

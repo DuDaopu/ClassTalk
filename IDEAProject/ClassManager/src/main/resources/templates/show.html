@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Java17-7</title>
+    <meta name="author" content="caibaojian.com"/>
+    <meta name="copyright"
+          content="caibaojian.com/relative-responsive-talbe.html"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="table-two">
+    <!-- first table name -->
+    <div>
+        <table style="table-layout: fixed; word-wrap: break-word;">
+            <thead>
+            <tr>
+                <th style="width: 45px">姓名</th>
+                <th style="width: 100%">内容</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user : ${user}">
+                <td><a th:href="@{'editA?id='}+${user.id}"
+                       th:text="${user.stuname}"></a></td>
+                <td>
+                    <div th:text="${user.content}"></div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

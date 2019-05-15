@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+table {
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 0;
+}
+
+table tr td {
+	border: 1px solid #999;
+	padding: .5em 1em;
+	white-space: nowrap;
+}
+
+table tr th {
+	border: 1px solid #999;
+	padding: .5em 1em;
+	white-space: nowrap;
+}
+
+a{
+	text-decoration: none;
+}
+
+.table-two {
+	position: relative;
+}
+/*左边内容是表头名的宽度，根据实际情况而定,你也可以使用百分比*/
+.table-first {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 102px; /*width:20%;*/
+}
+
+.table-l {
+	left: 0;
+	top: 0;
+	width: 45px; /*width:20%;*/
+}
+
+.table-le {
+	left: 0;
+	top: 0;
+	width: 45px; /*width:20%;*/
+}
+/*距离左边表头的内容宽度*/
+.table-second {
+	padding-left: 102px; /*width:20%*/
+}
+
+.table-s {
+	padding-left: 102px; /*width:20%*/
+}
+
+div{
+	width: 100%;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}

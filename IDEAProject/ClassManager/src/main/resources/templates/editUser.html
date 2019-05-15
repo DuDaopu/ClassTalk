@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>编辑界面</title>
+    <meta name="author" content="caibaojian.com"/>
+    <meta name="copyright"
+          content="caibaojian.com/relative-responsive-talbe.html"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="table-two">
+    <h2>点击姓名即可提交修改</h2>
+
+
+    <!-- first table name -->
+    <div>
+        <table style="table-layout: fixed; word-wrap: break-word;">
+            <thead>
+            <tr>
+                <th style="width: 40px">ID</th>
+                <th>姓名</th>
+                <th>更改后姓名</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user : ${user}">
+                <form th:action="@{/editUser}" method="post">
+                    <td><input type="text" readonly="readonly" name="id"
+                               th:value="${user.id}"/></td>
+                    <td><input type="submit" th:value="${user.stuname}"/></td>
+                    <td><input type="text" name="stuname" th:value="${user.stuname}"/></td>
+                </form>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>删除学生界面</title>
+    <meta name="author" content="caibaojian.com"/>
+    <meta name="copyright"
+          content="caibaojian.com/relative-responsive-talbe.html"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="table-two">
+    <h2>点击姓名即可删除</h2>
+    <!-- first table name -->
+    <div>
+        <table style="table-layout: fixed; word-wrap: break-word;">
+            <thead>
+            <tr>
+                <th style="width: 45px">姓名</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user : ${user}">
+                <td><a th:href="@{/delUsers?id=}+${user.id}"
+                       th:text="${user.stuname}"></a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>
